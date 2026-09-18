@@ -21,8 +21,7 @@ const WORD_DATABASE = [
   "leg", "foot", "body", "heart", "shirt", "pants", "shoes", "hat", "cap", "coat",
 
   // 動詞（動作・状態）
-  "be", "have", "do", "go", "come", "make", "take", "see", "look", "watch",
-  "listen", "hear", "speak", "talk", "say", "tell", "read", "write", "study", "learn", "teach",
+  "watch", "listen", "hear", "speak", "talk", "say", "tell", "read", "write", "study", "learn", "teach",
   "run", "walk", "jump", "swim", "fly", "play", "sing", "dance", "eat", "drink",
   "sleep", "wash", "open", "close", "start", "stop", "finish", "clean", "help", "use",
   "find", "get", "give", "sell", "send", "bring", "carry", "push",
@@ -49,7 +48,7 @@ const WORD_DATABASE = [
   "interest", "island", "job", "journey", "key", "kind", "land", "language", "law", "life",
   "light", "line", "list", "machine", "market", "matter", "meaning", "memory", "mind", "money",
   "mountain", "music", "nature", "news", "noise", "ocean", "office", "order", "paper", "part",
-  "party", "past", "peace", "pet", "place", "plan", "plant", "point", "police", "power",
+  "party", "past", "place", "plan", "plant", "point", "police", "power",
   "practice", "present", "problem", "question", "radio", "reason", "rule", "safety", "sand", "science",
   "score", "shape", "side", "sign", "skill", "space", "speech", "sport", "stage", "stone",
   "store", "story", "subject", "system", "task", "taste", "team", "test", "thought", "ticket",
@@ -63,7 +62,7 @@ const WORD_DATABASE = [
   "drive", "drop", "enjoy", "enter", "explain", "express", "fail", "fill", "follow", "forget",
   "grow", "guess", "happen", "hate", "hit", "hold", "hope", "hurt", "imagine", "include",
   "increase", "invite", "join", "jump", "keep", "kill", "laugh", "lead", "leave", "lend",
-  "lose", "match", "mean", "move", "need", "notice", "offer", "pass", "pick", "plan",
+  "lose", "match", "mean", "move", "notice", "offer", "pass", "pick", "plan",
   "prepare", "produce", "protect", "prove", "provide", "reach", "receive", "remember", "repeat", "report",
   "return", "ring", "rise", "save", "search", "seem", "serve", "set", "share", "show",
   "sing", "smile", "sound", "spend", "stand", "start", "suggest", "surprise", "touch", "travel",
@@ -77,18 +76,18 @@ const WORD_DATABASE = [
   "favorite", "few", "final", "fine", "first", "foreign", "formal", "fresh", "full", "fun",
   "funny", "general", "glad", "great", "green", "half", "hard", "heavy", "high", "honest",
   "hot", "huge", "hungry", "important", "impossible", "international", "kind", "last", "late", "lazy",
-  "left", "light", "likely", "local", "lonely", "loud", "low", "lucky", "main", "major",
+  "left", "light", "likely", "local", "lonely", "loud", "low", "lucky", "major",
   "many", "medical", "modern", "more", "most", "much", "national", "natural", "near", "necessary",
-  "next", "nice", "normal", "official", "old", "only", "open", "own", "perfect", "personal",
+  "next", "nice", "normal", "official", "old", "only", "own", "perfect", "personal",
   "physical", "pleasant", "polite", "popular", "possible", "present", "pretty", "private", "public", "pure",
-  "quick", "quiet", "ready", "real", "recent", "red", "rich", "right", "safe", "same",
+  "quick", "quiet", "ready", "recent", "red", "rich", "right", "safe", 
   "secret", "serious", "several", "simple", "single", "sleepy", "slow", "small", "soft", "special",
   "strange", "strong", "successful", "sure", "sweet", "tall", "terrible", "thick", "thin", "thirsty",
   "typical", "useful", "warm", "welcome", "whole", "wild",
   "wrong", "young",
 
   //追加
-  "beautiful",
+  "beautiful", "three", "seven", "eight", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
 
   //別解
   "clone", "neither", "sheer", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm", "paints", "peanuts", "plate", "pleat", "plot", "pilot"
