@@ -29,16 +29,22 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // ランダムに基本単語を選択
-    const randomIndex = Math.floor(Math.random() * WORD_DATABASE.length);
-    sampleAnswer = WORD_DATABASE[randomIndex].toLowerCase();
-    currentQuestion = removeVowels(sampleAnswer);
+    // 1. 母音を抜いた後の長さ（子音の数）が3文字以上の単語だけを抽出
+    const validWords = WORD_DATABASE.filter(word => {
+      const cleanWord = word.trim().toLowerCase();
+      const consonants = removeVowels(cleanWord); // 母音を抜いた文字列
+      return consonants.length >= 3;
+    });
 
-    // 母音のみの単語など、抜け結果が空になる場合は再生成
-    if (currentQuestion.length === 0) {
-      generateQuestion();
+    if (validWords.length === 0) {
+      questionDisplay.textContent = "ERR";
       return;
     }
+
+    // 2. 抽出したリストからランダムに1つ選択
+    const randomIndex = Math.floor(Math.random() * validWords.length);
+    sampleAnswer = validWords[randomIndex].toLowerCase();
+    currentQuestion = removeVowels(sampleAnswer);
 
     questionDisplay.textContent = currentQuestion.toUpperCase();
     userInput.value = "";
@@ -46,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     hideHint();
     userInput.focus();
   }
-
+  
   // 判定ロジック
   function checkAnswer(inputWord) {
     const cleanedInput = inputWord.trim().toLowerCase();
