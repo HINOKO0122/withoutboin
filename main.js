@@ -17,47 +17,48 @@ document.addEventListener("DOMContentLoaded", () => {
   let sampleAnswer = "";    
   let score = 0;
   let streak = 0;
-  let isWaitingNext = false; // 次の問題への遷移待ちフラグ
+  let isWaitingNext = false;
 
   // 母音を取り除く関数
   function removeVowels(word) {
     return word.toLowerCase().replace(/[aiueo]/g, "");
   }
 
-// 新しい問題を設定
+  // 現在の問題に対する WORD_DATABASE 内の「すべての正解候補」を取得する関数
+  function getAllValidAnswers() {
+    if (!WORD_DATABASE) return [];
+    
+    // 重複を排除しつつ一致する単語を抽出
+    const uniqueWords = Array.from(new Set(WORD_DATABASE));
+    return uniqueWords.filter(w => {
+      const cleanWord = String(w).replace(/[^a-zA-Z]/g, "").toLowerCase();
+      return removeVowels(cleanWord) === currentQuestion;
+    });
+  }
+
+  // 新しい問題を設定
   function generateQuestion() {
     if (!WORD_DATABASE || WORD_DATABASE.length === 0) {
       questionDisplay.textContent = "ERR";
       return;
     }
 
-    // 子音（アルファベットかつ母音以外の文字）が3文字以上の単語だけを厳密に抽出
+    // 子音（母音抜き）が3文字以上の単語のみを抽出
     const validWords = WORD_DATABASE.filter(word => {
       const cleanWord = String(word).replace(/[^a-zA-Z]/g, "").toLowerCase();
       const consonants = removeVowels(cleanWord);
       return consonants.length >= 3;
     });
 
-    // 子音3文字以上の単語が存在しない場合はエラー表示（データベースの確認が必要）
     if (validWords.length === 0) {
       questionDisplay.textContent = "NO WORD";
       return;
     }
 
-    // 子音3文字以上の単語群から、有効な問題が生成できるまでランダム選出をループ
-    let selectedWord = "";
-    let questionText = "";
+    const randomIndex = Math.floor(Math.random() * validWords.length);
+    sampleAnswer = String(validWords[randomIndex]).replace(/[^a-zA-Z]/g, "").toLowerCase();
+    currentQuestion = removeVowels(sampleAnswer);
 
-    while (questionText.length < 3) {
-      const randomIndex = Math.floor(Math.random() * validWords.length);
-      selectedWord = String(validWords[randomIndex]).replace(/[^a-zA-Z]/g, "").toLowerCase();
-      questionText = removeVowels(selectedWord);
-    }
-
-    sampleAnswer = selectedWord;
-    currentQuestion = questionText;
-
-    // 画面表示と状態のリセット
     questionDisplay.textContent = currentQuestion.toUpperCase();
     userInput.value = "";
     userInput.disabled = false;
@@ -71,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 判定および進行ロジック
   function handleFormSubmit() {
-    // すでに正解・降参後で「次の問題待ち」状態の場合
     if (isWaitingNext) {
       generateQuestion();
       return;
@@ -80,20 +80,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const inputWord = userInput.value.trim().toLowerCase();
     if (!inputWord) return;
 
-    // 条件1: データベース内に存在する英単語か？
-    const existsInDB = WORD_DATABASE.map(w => w.toLowerCase()).includes(inputWord);
-
-    // 条件2: 入力単語から母音を抜いたものが問題文と一致するか？
+    // WORD_DATABASE 内に小文字変換して存在するか確認
+    const cleanDB = WORD_DATABASE.map(w => String(w).replace(/[^a-zA-Z]/g, "").toLowerCase());
+    const existsInDB = cleanDB.includes(inputWord);
     const matchesPattern = removeVowels(inputWord) === currentQuestion;
 
     if (existsInDB && matchesPattern) {
-      // 正解処理
+      // 正解処理：words.js 内の全別解を取得して表示
       score += 10;
       streak += 1;
       updateStats();
-      showFeedback(`正解！ 🎉（"${inputWord}"）\n[Enter] または「次の問題」を押してください`, true);
+
+      const allAnswers = getAllValidAnswers();
+      const answersText = allAnswers.join(", ");
+
+      showFeedback(
+        `正解！ 🎉（あなたが入力: "${inputWord}"）\n` +
+        `【すべての正解候補 (${allAnswers.length}個)】\n${answersText}\n\n` +
+        `[Enter] または「次の問題」を押してください`, 
+        true
+      );
       
-      // 状態の切り替え
       isWaitingNext = true;
       userInput.disabled = true;
       submitBtn.querySelector("span").textContent = "次の問題";
@@ -119,14 +126,17 @@ document.addEventListener("DOMContentLoaded", () => {
   function showAnswer() {
     if (isWaitingNext) return;
 
-    // 現在の問題に対する全正解候補を検索
-    const validAnswers = WORD_DATABASE.filter(
-      w => removeVowels(w.toLowerCase()) === currentQuestion
-    );
+    const allAnswers = getAllValidAnswers();
+    const answersText = allAnswers.join(", ");
 
     streak = 0;
     updateStats();
-    showFeedback(`答え: ${validAnswers.join(", ")}\n[Enter] または「次の問題」を押してください`, false);
+    
+    showFeedback(
+      `【すべての正解候補 (${allAnswers.length}個)】\n${answersText}\n\n` +
+      `[Enter] または「次の問題」を押してください`, 
+      false
+    );
 
     isWaitingNext = true;
     userInput.disabled = true;
@@ -160,11 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ヒント表示
   function showHint() {
-    const validAnswers = WORD_DATABASE.filter(
-      w => removeVowels(w.toLowerCase()) === currentQuestion
-    );
+    const allAnswers = getAllValidAnswers();
 
-    hintBox.textContent = `💡 ヒント: 文字数は ${sampleAnswer.length} 文字（正解候補は全部で ${validAnswers.length} 個）`;
+    hintBox.textContent = `💡 ヒント: 出題例の文字数は ${sampleAnswer.length} 文字（正解候補はデータベース内に合計 ${allAnswers.length} 個）`;
     hintBox.classList.remove("hidden");
   }
 
