@@ -90,5 +90,5 @@ const WORD_DATABASE = [
   "beautiful", "three", "seven", "eight", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "square", "triangle",
 
   //別解
-  "clone", "neither", "sheer", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm", "paints", "peanuts", "plate", "pleat", "plot", "pilot", "proper", "slot", "trap"
+  "clone", "neither", "sheer", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm", "paints", "peanuts", "plate", "pleat", "plot", "pilot", "proper", "slot", "trap", "bitter", "butter"
 ];
