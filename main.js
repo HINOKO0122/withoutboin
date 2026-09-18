@@ -24,16 +24,17 @@ document.addEventListener("DOMContentLoaded", () => {
     return word.toLowerCase().replace(/[aiueo]/g, "");
   }
 
-  // 新しい問題を設定
+// 新しい問題を設定
   function generateQuestion() {
     if (!WORD_DATABASE || WORD_DATABASE.length === 0) {
       questionDisplay.textContent = "ERR";
       return;
     }
 
-    // 子音（母音を抜いた後の長さ）が3文字以上の単語だけを抽出
+    // 子音（母音および記号を取り除いた後の長さ）が3文字以上の単語だけを抽出
     const validWords = WORD_DATABASE.filter(word => {
-      const cleanWord = word.trim().toLowerCase();
+      // アルファベット以外（クォーテーションやカンマ等）を除去して小文字化
+      const cleanWord = String(word).replace(/[^a-zA-Z]/g, "").toLowerCase();
       const consonants = removeVowels(cleanWord);
       return consonants.length >= 3;
     });
@@ -44,7 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const randomIndex = Math.floor(Math.random() * validWords.length);
-    sampleAnswer = validWords[randomIndex].toLowerCase();
+    // 選ばれた単語もアルファベットのみに整形
+    sampleAnswer = String(validWords[randomIndex]).replace(/[^a-zA-Z]/g, "").toLowerCase();
     currentQuestion = removeVowels(sampleAnswer);
 
     questionDisplay.textContent = currentQuestion.toUpperCase();
