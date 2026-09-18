@@ -280,3 +280,38 @@ body {
   20%, 60% { transform: translateX(-6px); }
   40%, 80% { transform: translateX(6px); }
 }
+
+/* --- 報告用リンクのスタイル --- */
+.report-link-wrapper {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.report-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #64748b;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.report-link:hover {
+  color: #2563eb;
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+.report-link svg {
+  flex-shrink: 0;
+}
