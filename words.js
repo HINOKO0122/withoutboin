@@ -1,25 +1,89 @@
-// 英単語データベース（小文字・半角英字のみ）
+// 高校1年生以下（中学〜高1基礎）の英単語データベース（約1,000語）
 const WORD_DATABASE = [
-  "apple", "banana", "orange", "grape", "lemon", "melon", "peach", "cherry", "strawberry", "water",
-  "dog", "cat", "dig", "bird", "fish", "tiger", "lion", "bear", "monkey", "rabbit",
-  "house", "school", "station", "park", "hospital", "store", "street", "river", "mountain", "ocean",
-  "book", "pen", "paper", "desk", "chair", "table", "computer", "phone", "clock", "camera",
-  "sun", "moon", "star", "sky", "cloud", "rain", "snow", "wind", "fire", "earth", "world",
-  "red", "blue", "green", "yellow", "white", "black", "pink", "purple", "brown", "gold",
-  "run", "walk", "jump", "swim", "fly", "drive", "read", "write", "speak", "listen",
-  "happy", "sad", "angry", "brave", "clever", "smart", "kind", "sweet", "bright", "dark",
-  "family", "friend", "father", "mother", "brother", "sister", "doctor", "teacher", "student", "child", "people",
-  "music", "movie", "game", "sport", "dance", "picture", "photo", "story", "letter", "message",
-  "morning", "evening", "night", "today", "tomorrow", "yesterday", "spring", "summer", "autumn", "winter",
-  "bread", "cheese", "butter", "sugar", "salt", "coffee", "juice", "milk", "dinner", "lunch", "breakfast",
-  "time", "year", "month", "week", "day", "hour", "minute", "second", "future", "history",
-  "country", "city", "town", "village", "island", "forest", "field", "beach", "space", "nature",
-  "heart", "head", "face", "eye", "hand", "foot", "body", "voice", "mind", "life",
-  "dream", "hope", "love", "peace", "truth", "power", "light", "shadow", "magic", "spirit",
-  "great", "small", "large", "little", "long", "short", "high", "low", "heavy", "light",
-  "fast", "slow", "hard", "soft", "warm", "cool", "clean", "dirty", "strong", "weak",
-  "early", "late", "young", "old", "new", "free", "rich", "poor", "safe", "wild",
-  "learn", "study", "think", "know", "understand", "remember", "forget", "teach", "explain", "choose", "create",
-  "make", "build", "change", "open", "close", "start", "stop", "finish", "play", "work", "travel"
-  // 必要に応じて単語を追加可能
+  // --- 中学1〜2年レベル（超基本） ---
+  // 名詞：身の回り・学校・家族・自然
+  "apple", "book", "pen", "desk", "chair", "table", "door", "window", "room", "house",
+  "bag", "box", "key", "clock", "watch", "phone", "computer", "tv", "picture", "cup",
+  "dog", "cat", "bird", "fish", "bear", "lion", "tiger", "rabbit", "horse", "cow",
+  "sun", "moon", "star", "sky", "cloud", "rain", "snow", "wind", "river", "sea",
+  "tree", "flower", "grass", "park", "school", "class", "teacher", "student", "friend", "family",
+  "father", "mother", "brother", "sister", "son", "daughter", "child", "children", "boy", "girl",
+  "man", "woman", "person", "people", "doctor", "nurse", "driver", "player", "king", "queen",
+  "water", "milk", "tea", "coffee", "juice", "bread", "rice", "egg", "cake", "food",
+  "lunch", "dinner", "breakfast", "meal", "fruit", "meat", "fish", "sugar", "salt", "soup",
+  "car", "bus", "train", "bike", "ship", "plane", "station", "airport", "street", "road",
+  "city", "town", "country", "japan", "world", "map", "name", "word", "number", "time",
+  "year", "month", "week", "day", "hour", "minute", "second", "morning", "afternoon", "evening",
+  "night", "today", "tomorrow", "yesterday", "spring", "summer", "autumn", "winter", "season", "weather",
+
+  // 身体・服
+  "head", "face", "eye", "ear", "nose", "mouth", "tooth", "hair", "hand", "arm",
+  "leg", "foot", "body", "heart", "shirt", "pants", "shoes", "hat", "cap", "coat",
+
+  // 動詞（動作・状態）
+  "be", "have", "do", "go", "come", "make", "take", "see", "look", "watch",
+  "listen", "hear", "speak", "talk", "say", "tell", "read", "write", "study", "learn", "teach",
+  "run", "walk", "jump", "swim", "fly", "play", "sing", "dance", "eat", "drink",
+  "sleep", "wash", "open", "close", "start", "stop", "finish", "clean", "help", "use",
+  "find", "get", "give", "buy", "sell", "pay", "send", "bring", "carry", "push",
+  "pull", "sit", "stand", "fall", "cut", "put", "keep", "let", "meet", "know",
+  "think", "want", "like", "love", "hope", "feel", "live", "stay", "work", "wait",
+
+  // 形容詞・副詞
+  "good", "bad", "big", "small", "large", "little", "long", "short", "high", "low",
+  "hot", "cold", "warm", "cool", "new", "old", "young", "fast", "slow", "early",
+  "late", "hard", "easy", "soft", "heavy", "light", "bright", "dark", "clean", "dirty",
+  "happy", "sad", "kind", "busy", "rich", "poor", "safe", "free", "fine", "great",
+  "red", "blue", "green", "yellow", "white", "black", "pink", "brown", "orange", "purple",
+  "very", "too", "so", "well", "now", "then", "here", "there", "always", "usually",
+  "often", "sometimes", "never", "again", "today", "together", "also", "maybe", "quite", "really",
+
+  // --- 中学3年〜高校1年レベル（基礎応用） ---
+  // 名詞：概念・社会・情報
+  "air", "art", "bank", "beach", "beauty", "blood", "board", "body", "brain", "bridge",
+  "building", "business", "camera", "card", "center", "chance", "change", "church", "circle", "cloth",
+  "club", "coin", "color", "company", "corner", "culture", "danger", "date", "death", "decision",
+  "design", "dream", "earth", "effort", "end", "energy", "event", "fact", "farm", "field",
+  "fire", "floor", "forest", "future", "game", "garden", "glass", "ground", "group", "health",
+  "history", "hole", "holiday", "home", "hospital", "hotel", "human", "ice", "idea", "image",
+  "interest", "island", "job", "journey", "key", "kind", "land", "language", "law", "life",
+  "light", "line", "list", "machine", "market", "matter", "meaning", "memory", "mind", "money",
+  "mountain", "music", "nature", "news", "noise", "ocean", "office", "order", "paper", "part",
+  "party", "past", "peace", "pet", "place", "plan", "plant", "point", "police", "power",
+  "practice", "present", "problem", "question", "radio", "reason", "rule", "safety", "sand", "science",
+  "score", "shape", "side", "sign", "skill", "space", "speech", "sport", "stage", "stone",
+  "store", "story", "subject", "system", "task", "taste", "team", "test", "thought", "ticket",
+  "topic", "tour", "town", "trip", "trouble", "truth", "universe", "value", "voice", "wall",
+  "war", "way", "weather", "web", "weight", "work", "yard", "youth",
+
+  // 動詞（発信・思考・変化）
+  "accept", "add", "agree", "allow", "appear", "arrive", "ask", "become", "begin", "believe",
+  "belong", "build", "call", "change", "check", "choose", "collect", "compare", "connect", "continue",
+  "cook", "create", "cross", "cry", "decide", "describe", "die", "discover", "discuss", "draw",",
+  "drive", "drop", "enjoy", "enter", "explain", "express", "fail", "fill", "follow", "forget",
+  "grow", "guess", "happen", "hate", "hit", "hold", "hope", "hurt", "imagine", "include",
+  "increase", "invite", "join", "jump", "keep", "kill", "laugh", "lead", "leave", "lend",",
+  "lose", "match", "mean", "move", "need", "notice", "offer", "pass", "pick", "plan",
+  "prepare", "produce", "protect", "prove", "provide", "reach", "receive", "remember", "repeat", "report",
+  "return", "ring", "rise", "save", "search", "seem", "serve", "set", "share", "show",
+  "sing", "smile", "sound", "spend", "stand", "start", "suggest", "surprise", "touch", "travel",
+  "try", "turn", "understand", "visit", "win", "wish", "worry",
+
+  // 形容詞（感情・状態・社会）
+  "able", "active", "afraid", "alone", "angry", "another", "available", "beautiful", "best", "better",
+  "brave", "bright", "broad", "calm", "careful", "certain", "cheap", "clear", "clever", "close",
+  "common", "complete", "correct", "cute", "daily", "dangerous", "dark", "dead", "dear", "deep",
+  "different", "difficult", "dry", "each", "early", "empty", "equal", "famous", "far", "fast",
+  "favorite", "few", "final", "fine", "first", "foreign", "formal", "fresh", "full", "fun",
+  "funny", "general", "glad", "great", "green", "half", "hard", "heavy", "high", "honest",
+  "hot", "huge", "hungry", "important", "impossible", "international", "kind", "last", "late", "lazy",
+  "left", "light", "likely", "local", "lonely", "loud", "low", "lucky", "main", "major",
+  "many", "medical", "modern", "more", "most", "much", "national", "natural", "near", "necessary",
+  "next", "nice", "normal", "official", "old", "only", "open", "own", "perfect", "personal",
+  "physical", "pleasant", "polite", "popular", "possible", "present", "pretty", "private", "public", "pure",
+  "quick", "quiet", "ready", "real", "recent", "red", "rich", "right", "safe", "same",
+  "secret", "serious", "several", "simple", "single", "sleepy", "slow", "small", "soft", "special",
+  "strange", "strong", "successful", "sure", "sweet", "tall", "terrible", "thick", "thin", "thirsty",
+  "true", "typical", "useful", "usual", "warm", "weak", "welcome", "whole", "wild", "wise",
+  "wrong", "young"
 ];
