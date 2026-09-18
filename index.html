@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Vowel Drop Quiz - 母音抜け英単語クイズ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo-badge">Word Puzzle</div>
+      <h1>Vowel Drop Quiz</h1>
+      <p class="subtitle">母音（A, I, U, E, O）が抜けた単語から元の英単語を推測しよう！</p>
+    </header>
+
+    <main class="quiz-card">
+      <div class="status-bar">
+        <div class="status-item">
+          <span class="label">SCORE</span>
+          <span id="score" class="value">0</span>
+        </div>
+        <div class="status-item">
+          <span class="label">STREAK</span>
+          <span id="streak" class="value">0</span>
+        </div>
+      </div>
+
+      <div class="question-box">
+        <span class="question-label">問題（母音抜き）</span>
+        <div id="question-display" class="question-text">---</div>
+      </div>
+
+      <form id="answer-form" class="answer-form" autocomplete="off" onsubmit="return false;">
+        <div class="input-wrapper">
+          <input 
+            type="text" 
+            id="user-input" 
+            placeholder="英単語を入力（例: dog, dig）" 
+            pattern="[A-Za-z]+" 
+            autocorrect="off" 
+            autocapitalize="none"
+            spellcheck="false"
+            required
+          >
+          <button type="submit" id="submit-btn" class="submit-btn">
+            <span>判定</span>
+          </button>
+        </div>
+      </form>
+
+      <div id="feedback-message" class="feedback-message hidden"></div>
+
+      <div class="action-bar">
+        <button id="skip-btn" class="secondary-btn">別の問題に変更</button>
+        <button id="hint-btn" class="secondary-btn">ヒントを見る</button>
+      </div>
+
+      <div id="hint-box" class="hint-box hidden"></div>
+    </main>
+
+    <footer class="app-footer">
+      <p>完全一致しなくても、データベース内に存在し母音を取り除いて問題文に合致すれば正解となります。</p>
+    </footer>
+  </div>
+
+  <script src="words.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
