@@ -87,8 +87,12 @@ const WORD_DATABASE = [
   "wrong", "young",
 
   //追加
-  "beautiful", "three", "seven", "eight", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "square", "triangle",
+  "beautiful", "three", "seven", "eight", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+  "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "square", "triangle", "guitar", "piano",
+  "soccer", "baseball", "tennis", "basketball", "everyday",
 
   //別解
-  "clone", "neither", "sheer", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm", "paints", "peanuts", "plate", "pleat", "plot", "pilot", "proper", "slot", "trap", "bitter", "butter"
+  "clone", "neither", "sheer", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm",
+  "paints", "peanuts", "plate", "pleat", "plot", "pilot", "proper", "slot", "trap", "bitter", "butter",
+  "mist", "must", "song"
 ];
