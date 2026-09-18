@@ -31,24 +31,33 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // 子音（母音および記号を取り除いた後の長さ）が3文字以上の単語だけを抽出
+    // 子音（アルファベットかつ母音以外の文字）が3文字以上の単語だけを厳密に抽出
     const validWords = WORD_DATABASE.filter(word => {
-      // アルファベット以外（クォーテーションやカンマ等）を除去して小文字化
       const cleanWord = String(word).replace(/[^a-zA-Z]/g, "").toLowerCase();
       const consonants = removeVowels(cleanWord);
       return consonants.length >= 3;
     });
 
+    // 子音3文字以上の単語が存在しない場合はエラー表示（データベースの確認が必要）
     if (validWords.length === 0) {
-      questionDisplay.textContent = "ERR";
+      questionDisplay.textContent = "NO WORD";
       return;
     }
 
-    const randomIndex = Math.floor(Math.random() * validWords.length);
-    // 選ばれた単語もアルファベットのみに整形
-    sampleAnswer = String(validWords[randomIndex]).replace(/[^a-zA-Z]/g, "").toLowerCase();
-    currentQuestion = removeVowels(sampleAnswer);
+    // 子音3文字以上の単語群から、有効な問題が生成できるまでランダム選出をループ
+    let selectedWord = "";
+    let questionText = "";
 
+    while (questionText.length < 3) {
+      const randomIndex = Math.floor(Math.random() * validWords.length);
+      selectedWord = String(validWords[randomIndex]).replace(/[^a-zA-Z]/g, "").toLowerCase();
+      questionText = removeVowels(selectedWord);
+    }
+
+    sampleAnswer = selectedWord;
+    currentQuestion = questionText;
+
+    // 画面表示と状態のリセット
     questionDisplay.textContent = currentQuestion.toUpperCase();
     userInput.value = "";
     userInput.disabled = false;
