@@ -96,5 +96,5 @@ const WORD_DATABASE = [
   //別解
   "clone", "neither", "sheer", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm",
   "paints", "peanuts", "plate", "pleat", "plot", "pilot", "proper", "slot", "trap", "bitter", "butter",
-  "mist", "must", "song", "shop", "further", "feather"
+  "mist", "must", "song", "shop", "further", "feather", "escort"
 ];
