@@ -63,7 +63,8 @@ const WORD_DATABASE = [
   "grow", "guess", "happen", "hold", "hurt", "imagine", "include",
   "increase", "invite", "jump", "kill", "laugh", "leave", "lend",
   "match", "notice", "offer", "pass", "pick", "plan",
-  "prepare", "produce", "protect", "prove", "provide", "reach", "receive", "remember", "repeat", "report",
+  "prepare", "produce", "protect", "prove", "provide", "reach", "receive", "remember", "repeat",
+  "report",
   "return", "ring", "search", "serve", "set", "share", "show",
   "sing", "smile", "sound", "spend", "stand", "start", "suggest", "surprise", "touch", "travel",
   "turn", "understand", "visit", "wish", "worry",
@@ -79,7 +80,8 @@ const WORD_DATABASE = [
   "left", "light", "likely", "local", "lonely", "lucky", "major",
   "many", "medical", "modern", "more", "most", "much", "national", "natural", "near", "necessary",
   "next", "normal", "official", "only", "perfect", "personal",
-  "physical", "pleasant", "polite", "popular", "possible", "present", "pretty", "private", "public", "pure",
+  "physical", "pleasant", "polite", "popular", "possible", "present", "pretty", "private", "public",
+  "pure",
   "quick", "ready", "recent", "rich", "right",
   "secret", "serious", "several", "simple", "single", "sleepy", "slow", "small", "soft", "special",
   "strange", "strong", "successful", "sure", "sweet", "tall", "terrible", "thick", "thin", "thirsty",
@@ -94,5 +96,5 @@ const WORD_DATABASE = [
   //別解
   "clone", "neither", "sheer", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm",
   "paints", "peanuts", "plate", "pleat", "plot", "pilot", "proper", "slot", "trap", "bitter", "butter",
-  "mist", "must", "song"
+  "mist", "must", "song", "shop", "further", "feather"
 ];
