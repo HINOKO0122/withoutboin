@@ -2,11 +2,11 @@
 const WORD_DATABASE = [
   // --- 中学1〜2年レベル（超基本） ---
   // 名詞：身の回り・学校・家族・自然
-  "apple", "book", "pen", "desk", "chair", "table", "door", "window", "room", "house",
-  "bag", "box", "key", "clock", "watch", "phone", "computer", "tv", "picture", "cup",
-  "dog", "cat", "bird", "fish", "bear", "lion", "tiger", "rabbit", "horse", "cow",
-  "sun", "moon", "star", "sky", "cloud", "rain", "snow", "wind", "river", "sea",
-  "tree", "flower", "grass", "park", "school", "class", "teacher", "student", "friend", "family",
+  "apple", "desk", "chair", "table", "window",
+  "clock", "watch", "phone", "computer", "picture",
+  "bird", "fish", "tiger", "rabbit", "horse",
+  "star", "sky", "cloud", "snow", "wind", "river",
+  "flower", "grass", "park", "school", "class", "teacher", "student", "friend", "family",
   "father", "mother", "brother", "sister", "son", "daughter", "child", "children", "boy", "girl",
   "man", "woman", "person", "people", "doctor", "nurse", "driver", "player", "king", "queen",
   "water", "milk", "tea", "coffee", "juice", "bread", "rice", "egg", "cake", "food",
@@ -25,8 +25,8 @@ const WORD_DATABASE = [
   "listen", "hear", "speak", "talk", "say", "tell", "read", "write", "study", "learn", "teach",
   "run", "walk", "jump", "swim", "fly", "play", "sing", "dance", "eat", "drink",
   "sleep", "wash", "open", "close", "start", "stop", "finish", "clean", "help", "use",
-  "find", "get", "give", "buy", "sell", "pay", "send", "bring", "carry", "push",
-  "pull", "sit", "stand", "fall", "cut", "put", "keep", "let", "meet", "know",
+  "find", "get", "give", "sell", "send", "bring", "carry", "push",
+  "pull", "sit", "stand", "fall", "cut", "put", "keep", "know",
   "think", "want", "like", "love", "hope", "feel", "live", "stay", "work", "wait",
 
   // 形容詞・副詞
@@ -59,7 +59,7 @@ const WORD_DATABASE = [
   // 動詞（発信・思考・変化）
   "accept", "add", "agree", "allow", "appear", "arrive", "ask", "become", "begin", "believe",
   "belong", "build", "call", "change", "check", "choose", "collect", "compare", "connect", "continue",
-  "cook", "create", "cross", "cry", "decide", "describe", "die", "discover", "discuss", "draw",
+  "cook", "create", "cross", "decide", "describe", "die", "discover", "discuss", "draw",
   "drive", "drop", "enjoy", "enter", "explain", "express", "fail", "fill", "follow", "forget",
   "grow", "guess", "happen", "hate", "hit", "hold", "hope", "hurt", "imagine", "include",
   "increase", "invite", "join", "jump", "keep", "kill", "laugh", "lead", "leave", "lend",
@@ -67,13 +67,13 @@ const WORD_DATABASE = [
   "prepare", "produce", "protect", "prove", "provide", "reach", "receive", "remember", "repeat", "report",
   "return", "ring", "rise", "save", "search", "seem", "serve", "set", "share", "show",
   "sing", "smile", "sound", "spend", "stand", "start", "suggest", "surprise", "touch", "travel",
-  "try", "turn", "understand", "visit", "win", "wish", "worry",
+  "try", "turn", "understand", "visit", "wish", "worry",
 
   // 形容詞（感情・状態・社会）
   "able", "active", "afraid", "alone", "angry", "another", "available", "beautiful", "best", "better",
   "brave", "bright", "broad", "calm", "careful", "certain", "cheap", "clear", "clever", "close",
   "common", "complete", "correct", "cute", "daily", "dangerous", "dark", "dead", "dear", "deep",
-  "different", "difficult", "dry", "each", "early", "empty", "equal", "famous", "far", "fast",
+  "different", "difficult", "each", "early", "empty", "equal", "famous", "fast",
   "favorite", "few", "final", "fine", "first", "foreign", "formal", "fresh", "full", "fun",
   "funny", "general", "glad", "great", "green", "half", "hard", "heavy", "high", "honest",
   "hot", "huge", "hungry", "important", "impossible", "international", "kind", "last", "late", "lazy",
@@ -84,9 +84,12 @@ const WORD_DATABASE = [
   "quick", "quiet", "ready", "real", "recent", "red", "rich", "right", "safe", "same",
   "secret", "serious", "several", "simple", "single", "sleepy", "slow", "small", "soft", "special",
   "strange", "strong", "successful", "sure", "sweet", "tall", "terrible", "thick", "thin", "thirsty",
-  "true", "typical", "useful", "usual", "warm", "weak", "welcome", "whole", "wild", "wise",
+  "typical", "useful", "warm", "welcome", "whole", "wild",
   "wrong", "young",
 
+  //追加
+  "beautiful",
+
   //別解
-  "clone", "neither", "sheer", "sample", "port", "cord", "disk"
+  "clone", "neither", "sheer", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm", "paints", "peanuts", "plate", "pleat", "plot", "pilot"
 ];
