@@ -88,5 +88,5 @@ const WORD_DATABASE = [
   "wrong", "young",
 
   //別解
-  "clone", "neither", "sheer", "sample", "port", "cord"
+  "clone", "neither", "sheer", "sample", "port", "cord", "disk"
 ];
