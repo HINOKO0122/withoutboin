@@ -85,5 +85,8 @@ const WORD_DATABASE = [
   "secret", "serious", "several", "simple", "single", "sleepy", "slow", "small", "soft", "special",
   "strange", "strong", "successful", "sure", "sweet", "tall", "terrible", "thick", "thin", "thirsty",
   "true", "typical", "useful", "usual", "warm", "weak", "welcome", "whole", "wild", "wise",
-  "wrong", "young"
+  "wrong", "young",
+
+  //別解
+  "clone", "neither", "sheer", "sample"
 ];
