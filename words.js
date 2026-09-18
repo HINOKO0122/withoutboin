@@ -10,15 +10,15 @@ const WORD_DATABASE = [
   "father", "mother", "brother", "sister", "daughter", "child", "children", "girl",
   "woman", "person", "people", "doctor", "nurse", "driver", "player", "king",
   "water", "milk", "coffee", "bread",
-  "lunch", "dinner", "breakfast", "fruit", "meat", "fish", "sugar", "salt",
-  "car", "bus", "train", "bike", "ship", "plane", "station", "airport", "street", "road",
+  "lunch", "dinner", "breakfast", "fruit", "fish", "sugar", "salt",
+  "car", "bus", "train", "bike", "ship", "plane", "station", "airport", "street",
   "city", "town", "country", "japan", "world", "word", "number",
   "month", "week", "minute", "second", "morning", "afternoon", "evening",
   "night", "today", "tomorrow", "yesterday", "spring", "summer", "autumn", "winter", "season", "weather",
 
   // 身体・服
   "mouth", "tooth", "hand",
-   "body", "heart", "shirt", "pants", "shoes",
+  "body", "heart", "shirt", "pants", "shoes",
 
   // 動詞（動作・状態）
   "watch", "listen", "speak", "talk", "tell", "write", "study", "learn", "teach",
@@ -35,11 +35,11 @@ const WORD_DATABASE = [
   "happy", "kind", "busy", "rich", "fine", "great",
   "blue", "green", "yellow", "white", "black", "pink", "brown", "orange", "purple",
   "very",  "well", "then", "there", "always", "usually",
-  "often", "sometimes", "never", "again", "today", "together", "maybe", "quite", "really",
+  "often", "sometimes", "never", "again", "today", "together", "maybe", "really",
 
   // --- 中学3年〜高校1年レベル（基礎応用） ---
   // 名詞：概念・社会・情報
-  "bank", "beach", "beauty", "blood", "board", "body", "brain", "bridge",
+  "bank", "beach", "beauty", "blood", "board", "brain", "bridge",
   "building", "business", "camera", "card", "center", "chance", "change", "church", "circle", "cloth",
   "club", "color", "company", "corner", "culture", "danger", "death", "decision",
   "design", "dream", "earth", "effort", "energy", "event", "fact", "farm", "field",
@@ -61,7 +61,7 @@ const WORD_DATABASE = [
   "create", "cross", "decide", "describe", "discover", "discuss", "draw",
   "drive", "drop", "enjoy", "enter", "explain", "express", "fill", "follow", "forget",
   "grow", "guess", "happen", "hold", "hurt", "imagine", "include",
-  "increase", "invite", "jump", "keep", "kill", "laugh", "leave", "lend",
+  "increase", "invite", "jump", "kill", "laugh", "leave", "lend",
   "match", "notice", "offer", "pass", "pick", "plan",
   "prepare", "produce", "protect", "prove", "provide", "reach", "receive", "remember", "repeat", "report",
   "return", "ring", "search", "serve", "set", "share", "show",
@@ -87,7 +87,7 @@ const WORD_DATABASE = [
   "wrong", "young",
 
   //追加
-  "beautiful", "three", "seven", "eight", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty",
+  "beautiful", "three", "seven", "eight", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "square", "triangle",
 
   //別解
   "clone", "neither", "sheer", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm", "paints", "peanuts", "plate", "pleat", "plot", "pilot", "proper", "slot"
