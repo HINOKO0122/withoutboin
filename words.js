@@ -94,7 +94,7 @@ const WORD_DATABASE = [
   "soccer", "baseball", "tennis", "basketball", "everyday",
 
   //別解
-  "clone", "neither", "sheer", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm",
+  "clone", "neither", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm",
   "paint", "peanuts", "plate", "pleat", "plot", "pilot", "proper", "slot", "trap", "bitter", "butter",
   "mist", "must", "song", "shop", "further", "feather", "escort"
 ];
