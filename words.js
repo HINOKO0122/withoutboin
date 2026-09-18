@@ -59,10 +59,10 @@ const WORD_DATABASE = [
   // 動詞（発信・思考・変化）
   "accept", "add", "agree", "allow", "appear", "arrive", "ask", "become", "begin", "believe",
   "belong", "build", "call", "change", "check", "choose", "collect", "compare", "connect", "continue",
-  "cook", "create", "cross", "cry", "decide", "describe", "die", "discover", "discuss", "draw",",
+  "cook", "create", "cross", "cry", "decide", "describe", "die", "discover", "discuss", "draw",
   "drive", "drop", "enjoy", "enter", "explain", "express", "fail", "fill", "follow", "forget",
   "grow", "guess", "happen", "hate", "hit", "hold", "hope", "hurt", "imagine", "include",
-  "increase", "invite", "join", "jump", "keep", "kill", "laugh", "lead", "leave", "lend",",
+  "increase", "invite", "join", "jump", "keep", "kill", "laugh", "lead", "leave", "lend",
   "lose", "match", "mean", "move", "need", "notice", "offer", "pass", "pick", "plan",
   "prepare", "produce", "protect", "prove", "provide", "reach", "receive", "remember", "repeat", "report",
   "return", "ring", "rise", "save", "search", "seem", "serve", "set", "share", "show",
