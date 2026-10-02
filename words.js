@@ -35,7 +35,7 @@ const WORD_DATABASE = [
   "happy", "kind", "busy", "rich", "fine", "great",
   "blue", "green", "yellow", "white", "black", "pink", "brown", "orange", "purple",
   "very",  "well", "then", "there", "always", "usually",
-  "often", "sometimes", "never", "again", "today", "together", "maybe", "really",
+  "often", "sometimes", "never", "again", "together", "maybe", "really",
 
   // --- 中学3年〜高校1年レベル（基礎応用） ---
   // 名詞：概念・社会・情報
@@ -91,7 +91,7 @@ const WORD_DATABASE = [
   //追加
   "beautiful", "three", "seven", "eight", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
   "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "square", "triangle", "guitar", "piano",
-  "soccer", "baseball", "tennis", "basketball", "everyday",
+  "soccer", "baseball", "tennis", "basketball", "everyday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday",
 
   //別解
   "clone", "neither", "sample", "port", "cord", "disk", "whale", "while", "wheel", "worm",
